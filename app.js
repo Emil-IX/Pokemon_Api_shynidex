@@ -1,6 +1,7 @@
 
 const containert = document.getElementById('container')
 const findPokemonInput = document.getElementById('findPokemon')
+const loader = document.getElementById('loader')
 
 let packPokemon = []
 
@@ -8,6 +9,8 @@ let packPokemon = []
 //Fet pokemon from pokeApi
 const getPokemons = async (base = 1, limit = 9) => {
 
+    loader.classList.add('loader')
+    
     for (base; base <= limit; base++) {
 
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${base}`)
@@ -15,6 +18,8 @@ const getPokemons = async (base = 1, limit = 9) => {
 
         packPokemon.push(data)
     }
+
+    loader.classList.remove('loader')
 }
 
 //Filter pokemon by input
