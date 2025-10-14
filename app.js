@@ -5,7 +5,7 @@ const findPokemonInput = document.getElementById('findPokemon')
 let packPokemon = []
 
 
-
+//Fet pokemon from pokeApi
 const getPokemons = async (base = 1, limit = 9) => {
 
     for (base; base <= limit; base++) {
@@ -17,7 +17,7 @@ const getPokemons = async (base = 1, limit = 9) => {
     }
 }
 
-
+//Filter pokemon by input
 findPokemonInput.addEventListener('input', (e) => {
 
     const inputText = e.target.value.toLowerCase().trim()
@@ -39,7 +39,7 @@ findPokemonInput.addEventListener('input', (e) => {
 })
 
 
-
+//Create render pokemon
 const renderPokemon = (pokemonArray) => {
     containert.innerHTML = ''
 
@@ -65,9 +65,9 @@ const renderPokemon = (pokemonArray) => {
 
 }
 
-
+//Start first view
 const  initApp = async () => {
-    await getPokemons(1, 150)
+    await getPokemons(1, 251)//Introduce the start pokemon  and the finale
     renderPokemon(packPokemon)
 }
 
