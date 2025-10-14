@@ -1,44 +1,74 @@
 
-const charaters = ['mario', 'luigi', 'yoshi', 'toad', 'peach'];
-const newchars = charaters.filter( ch => ch.length == 4 )
-const newchars2 = charaters.map( ch => ch + '!' )
+const containert = document.getElementById('container')
+const findPokemonInput = document.getElementById('findPokemon')
+
+let packPokemon = []
 
 
 
+const getPokemons = async (base = 1, limit = 9) => {
 
-//funcion para contar
+    for (base; base <= limit; base++) {
 
-const contarVocales = function(texto) {
-    let vocales = 'aeiou'
-
- return  texto
-   .toLowerCase()
-   .split('')
-   .filter( letras  => vocales.includes(letras)).length
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${base}`)
+        const data = await response.json()
+ 
+        packPokemon.push(data)
+    }
 }
 
 
+findPokemonInput.addEventListener('input', (e) => {
 
-const cuerpo = document.querySelector('body')
-const encabezdo = document.createElement('h1')
-encabezdo.textContent = "Charater list:"
-cuerpo.appendChild(encabezdo) 
+    const inputText = e.target.value.toLowerCase().trim()
 
+    const filterArr = packPokemon.filter(pokemon => {
 
-const componente = document.createElement('ol')
-cuerpo.appendChild(componente)
+        if (!inputText) {
+            return true
+        }
 
+        const pokemonName = pokemon.name.toLowerCase()
+            
+        return pokemonName.includes(inputText)
 
-const newCharaters = charaters.map( ch => ch.charAt(0).toUpperCase() + ch.slice(1) )
-newCharaters.push('Daisy', 'Bowser', 'Wario', 'Waluigi' , 'Rosalina', 'Toadette', 'Birdo' , 'Diddy Kong', 'King K. Rool', 'Funky Kong')
+    })
 
-newCharaters.forEach(ch => {
-   
-   const li = document.createElement('li')   
-   li.textContent = ch
-   componente.appendChild(li)
+    renderPokemon(filterArr)
+
 })
 
 
 
+const renderPokemon = (pokemonArray) => {
+    containert.innerHTML = ''
 
+    pokemonArray.forEach(pokemon => {
+
+        const { id, name, types, sprites: { front_shiny, front_default } } = pokemon
+
+        const element1 = types[0].type.name
+        const element2 = (types[1]?.type.name) ? ` - ${types[1]?.type.name}` : '';
+        const element1Fixes = element1.charAt(0).toUpperCase() + element1.slice(1);
+        const nameFixes = name.charAt(0).toUpperCase() + name.slice(1);
+
+        containert.innerHTML += `
+        <div class='container2'>  
+            <h2 class='text'>${nameFixes} </h2>    
+            <p class='no'>${id} <p>
+            <img src="${front_shiny}">
+            <p class="type">${element1Fixes}${element2}</p>
+         </div>
+    ` ;
+
+    });
+
+}
+
+
+const  initApp = async () => {
+    await getPokemons(1, 150)
+    renderPokemon(packPokemon)
+}
+
+initApp()
