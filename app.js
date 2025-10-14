@@ -12,7 +12,7 @@ const getPokemons = async (base = 1, limit = 9) => {
 
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${base}`)
         const data = await response.json()
- 
+
         packPokemon.push(data)
     }
 }
@@ -29,7 +29,7 @@ findPokemonInput.addEventListener('input', (e) => {
         }
 
         const pokemonName = pokemon.name.toLowerCase()
-            
+
         return pokemonName.includes(inputText)
 
     })
@@ -66,7 +66,7 @@ const renderPokemon = (pokemonArray) => {
 }
 
 //Start first view
-const  initApp = async () => {
+const initApp = async () => {
     await getPokemons(1, 251)//Introduce the start pokemon  and the finale
     renderPokemon(packPokemon)
 }
