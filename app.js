@@ -34,7 +34,8 @@ findPokemonInput.addEventListener('input', (e) => {
         }
 
         const pokemonName = pokemon.name.toLowerCase()
-
+        pokemonName.includes(inputText)
+        
         return pokemonName.includes(inputText)
 
     })
@@ -56,9 +57,10 @@ const renderPokemon = (pokemonArray) => {
         const element2 = (types[1]?.type.name) ? ` - ${types[1]?.type.name}` : '';
         const element1Fixes = element1.charAt(0).toUpperCase() + element1.slice(1);
         const nameFixes = name.charAt(0).toUpperCase() + name.slice(1);
+         console.log(element1)
 
         containert.innerHTML += `
-        <div class='container2'>  
+        <div class='container2 ${element1}'>  
             <h2 class='text'>${nameFixes} </h2>    
             <p class='no'>${id} <p>
             <img src="${front_shiny}">

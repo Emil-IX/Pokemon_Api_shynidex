@@ -78,6 +78,7 @@ body {
 
 
 .loader {
+    margin-top: 5em;
     width: 48px;
     height: 48px;
     border: 5px solid #afb7d7;
@@ -86,13 +87,112 @@ body {
     display: inline-block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    }
+}
 
-    @keyframes rotation {
+@keyframes rotation {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
-    } 
+}
+
+
+
+/*   elements colors */
+.grass {
+    background: linear-gradient(0deg, rgb(11, 71, 5) 0%, rgba(14, 186, 49, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(21, 143, 41) 7px;
+}
+
+.fire {
+    background: linear-gradient(0deg, rgb(118, 15, 15) 0%, rgba(233, 41, 27, 0.438) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(183, 12, 12) 7px;
+}
+
+.bug {
+    background: linear-gradient(0deg, rgb(27, 36, 0) 0%, rgba(152, 203, 24, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(135, 131, 12) 7px;
+}
+
+.water {
+    background: linear-gradient(0deg, rgb(0, 15, 36) 0%, rgba(24, 99, 203, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(12, 82, 135) 7px;
+}
+
+.normal {
+    background: linear-gradient(0deg, rgb(86, 82, 66) 0%, rgba(141, 133, 105, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(198, 189, 178) 7px;
+}
+
+.poison {
+    background: linear-gradient(0deg, rgb(36, 0, 35) 0%, rgba(79, 10, 102, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(112, 12, 135) 7px;
+}
+
+.fairy {
+    background: linear-gradient(0deg, rgb(36, 0, 7) 0%, rgba(102, 10, 44, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(135, 12, 69) 7px;
+}
+
+.dark {
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(64, 55, 65, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(0, 0, 0) 7px;
+}
+
+.water {
+    background: linear-gradient(0deg, rgb(7, 22, 68) 0%, rgba(34, 122, 247, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(50, 122, 222) 7px;
+}
+
+.flying {
+    background: linear-gradient(0deg, rgba(77, 79, 239, 0.838) 0%, rgba(10, 12, 109, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(196, 195, 238) 7px;
+}
+
+.dragon {
+    background: linear-gradient(0deg, rgb(7, 53, 68) 0%, rgba(34, 222, 247, 0.664) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(6, 157, 188) 7px;
+}
+
+.steel {
+    background: linear-gradient(0deg, rgb(20, 72, 50) 0%, rgba(21, 194, 165, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(92, 118, 113) 7px;
+}
+
+.psychic {
+    background: linear-gradient(0deg, rgb(36, 0, 31) 0%, rgba(247, 94, 219, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(247, 150, 226) 7px;
+}
+
+.ice {
+    background: linear-gradient(0deg, rgb(16, 90, 110) 0%, rgba(106, 190, 227, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(164, 212, 235) 7px;
+}
+
+.ground {
+    background: linear-gradient(0deg, rgb(129, 65, 19) 0%, rgba(175, 126, 67, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(135, 86, 12) 7px;
+}
+
+.rock {
+    background: linear-gradient(0deg, rgb(46, 24, 8) 0%, rgba(68, 48, 23, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(62, 40, 6) 7px;
+}
+
+.ghost {
+    background: linear-gradient(0deg, rgb(19, 0, 36) 0%, rgba(53, 9, 156, 0.584) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(37, 5, 136) 7px;
+}
+
+.electric {
+    background: linear-gradient(0deg, rgb(36, 33, 0) 0%, rgba(255, 244, 40, 0.814) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(236, 208, 0) 7px;
+}
+
+.fighting {
+    background: linear-gradient(0deg, rgb(123, 85, 4) 0%, rgba(183, 98, 24, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
+    border: solid rgb(212, 97, 21) 7px;
+}
