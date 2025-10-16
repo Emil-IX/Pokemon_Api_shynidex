@@ -2,6 +2,7 @@
 const containert = document.getElementById('container')
 const findPokemonInput = document.getElementById('findPokemon')
 const loader = document.getElementById('loader')
+const countText = document.getElementById('count')
 
 let packPokemon = []
 
@@ -49,6 +50,7 @@ findPokemonInput.addEventListener('input', (e) => {
 //Create render pokemon
 const renderPokemon = (pokemonArray) => {
     containert.innerHTML = ''
+    let count = 0
 
     pokemonArray.forEach(pokemon => {
         
@@ -59,10 +61,11 @@ const renderPokemon = (pokemonArray) => {
         const element1Fixes = element1.charAt(0).toUpperCase() + element1.slice(1);
         const nameFixes = name.charAt(0).toUpperCase() + name.slice(1);
         
-        const randon =  Math.floor(Math.random() * 100)
+        const randon =  Math.floor(Math.random() * 77)
         const randomPokemon = randon == 1 ? front_shiny : front_default
-        
         const classShiny = randon == 1 ? 'is-shiny' : '';
+
+        if(randon == 1) count++
 
         containert.innerHTML += `
         <div class='container2 ${element1} ${classShiny} '>  
@@ -74,6 +77,8 @@ const renderPokemon = (pokemonArray) => {
     ` ;
 
     });
+
+    countText.innerHTML = (count > 0) ? `Congratulations ! You got: <strong>${count}</strong>  Shiny !!` : ''
 
 }
 
