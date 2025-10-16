@@ -1,3 +1,25 @@
+body {
+    text-align: center;
+    background-color: rgb(240, 240, 240); 
+    position: relative; 
+    z-index: 1; 
+}
+
+body::before {
+    content: ""; 
+    min-height: 100vh;
+    background-image: url('./image/glass.jpg');
+    position: absolute;
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    opacity: 0.1; 
+}
+
+
 .findPokemonContainer {
     margin-top: 2em;
     margin-bottom: 4em;
@@ -26,6 +48,8 @@
     font-weight: 600;
     font-size: 15px;
 }
+
+
 
 .container2 {
     margin: 7px;
@@ -68,13 +92,9 @@ h2 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(235, 56, 56);
-    border-bottom: solid rgb(231, 228, 250) 3px;
 }
 
-body {
-    text-align: center;
-    background-color: rgb(240, 240, 240);
-}
+
 
 
 .loader {
