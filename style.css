@@ -92,6 +92,7 @@ h2 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(235, 56, 56);
+    
 }
 
 
@@ -209,10 +210,50 @@ h2 {
 
 .electric {
     background: linear-gradient(0deg, rgb(36, 33, 0) 0%, rgba(255, 244, 40, 0.814) 21%, rgba(255, 255, 255, 1) 56%);
-    border: solid rgb(236, 208, 0) 7px;
+    border: solid rgb(210, 198, 107) 7px;
 }
 
 .fighting {
     background: linear-gradient(0deg, rgb(123, 85, 4) 0%, rgba(183, 98, 24, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
     border: solid rgb(212, 97, 21) 7px;
+}
+
+
+
+
+
+
+.is-shiny {
+    box-shadow: 0 0 10px 7px rgb(255, 217, 0); 
+    border: 7px solid yellow;
+    background: linear-gradient(0deg, rgb(235, 229, 44) 0%, rgb(61, 33, 4) 21%, rgba(237, 136, 41, 0.897) 56%);
+
+    transform-style: none; 
+    animation: salto-suave 0.9s ease-in-out infinite alternate;
+}
+
+.is-shiny h2 {
+    color: white;
+    border-bottom: 3px solid yellow;
+}
+
+.is-shiny .no {
+    color: rgb(255, 255, 255);
+}
+
+.is-shiny .type {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+@keyframes salto-suave {
+    0% {
+        transform: translateY(0); 
+    }
+    100% {
+        transform: translateY(-5px); 
+    }
 }

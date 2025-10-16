@@ -6,6 +6,7 @@ const loader = document.getElementById('loader')
 let packPokemon = []
 
 
+
 //Fet pokemon from pokeApi
 const getPokemons = async (base = 1, limit = 9) => {
 
@@ -50,20 +51,24 @@ const renderPokemon = (pokemonArray) => {
     containert.innerHTML = ''
 
     pokemonArray.forEach(pokemon => {
-
+        
         const { id, name, types, sprites: { front_shiny, front_default } } = pokemon
 
         const element1 = types[0].type.name
         const element2 = (types[1]?.type.name) ? ` - ${types[1]?.type.name}` : '';
         const element1Fixes = element1.charAt(0).toUpperCase() + element1.slice(1);
         const nameFixes = name.charAt(0).toUpperCase() + name.slice(1);
-         console.log(element1)
+        
+        const randon =  Math.floor(Math.random() * 100)
+        const randomPokemon = randon == 1 ? front_shiny : front_default
+        
+        const classShiny = randon == 1 ? 'is-shiny' : '';
 
         containert.innerHTML += `
-        <div class='container2 ${element1}'>  
+        <div class='container2 ${element1} ${classShiny} '>  
             <h2 class='text'>${nameFixes} </h2>    
             <p class='no'>${id} <p>
-            <img src="${front_shiny}">
+            <img src="${randomPokemon}">
             <p class="type">${element1Fixes}${element2}</p>
          </div>
     ` ;
