@@ -1,12 +1,12 @@
 body {
     text-align: center;
-    background-color: rgb(240, 240, 240); 
-    position: relative; 
-    z-index: 1; 
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    z-index: 1;
 }
 
 body::before {
-    content: ""; 
+    content: "";
     min-height: 100vh;
     background-image: url('./image/glass.jpg');
     position: absolute;
@@ -15,8 +15,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    opacity: 0.1; 
+    z-index: -1;
+    opacity: 0.1;
 }
 
 
@@ -63,11 +63,24 @@ body::before {
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.44) 21%, rgba(255, 255, 255, 1) 56%);
 }
 
+
+/* .container2 img {
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
+
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-bottom: 5px; 
+} */
+
 .text {
-    font-family: monospace;
-    font-size: 20px;
-    border-bottom: red 2px solid;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    border-bottom: 3px solid rgb(223, 53, 53);
 }
+
+
 
 .no {
     font-weight: bold;
@@ -92,10 +105,10 @@ h2 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(235, 56, 56);
-    
+
 }
 
-#count{
+#count {
     color: rgb(142, 140, 140);
     margin-bottom: 2em;
     font-family: Helvetica, sans-serif;
@@ -240,11 +253,11 @@ h2 {
 
 
 .is-shiny {
-    box-shadow: 0 0 10px 7px rgb(255, 217, 0); 
+    box-shadow: 0 0 10px 7px rgb(255, 217, 0);
     border: 7px solid yellow;
     background: linear-gradient(0deg, rgb(235, 229, 44) 0%, rgb(61, 33, 4) 21%, rgba(237, 136, 41, 0.897) 56%);
 
-    transform-style: none; 
+    transform-style: none;
     animation: salto-suave 0.9s ease-in-out infinite alternate;
 }
 
@@ -267,9 +280,10 @@ h2 {
 
 @keyframes salto-suave {
     0% {
-        transform: translateY(0); 
+        transform: translateY(0);
     }
+
     100% {
-        transform: translateY(-5px); 
+        transform: translateY(-5px);
     }
 }
