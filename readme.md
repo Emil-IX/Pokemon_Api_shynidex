@@ -1,4 +1,4 @@
-# 🌟 Pokémon Card Explorer 🌟
+# 🌟 Shiny-dex 🌟
 
 A dynamic web application that leverages the **PokeAPI** to fetch, display, and manage Pokémon data in an appealing card format. Catch a glimpse of your favorite Pokémon, filter the collection, and try your luck at finding a rare **Shiny** version!
 
