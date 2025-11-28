@@ -2,11 +2,7 @@
 
 A dynamic web application that leverages the **PokeAPI** to fetch, display, and manage Pokémon data in an appealing card format. Catch a glimpse of your favorite Pokémon, filter the collection, and try your luck at finding a rare **Shiny** version!
 
-<<<<<<< HEAD
-##  Features
-=======
-## Features
->>>>>>> 73634b49409c580500c573cbf5a1b1d3fcb04c8c
+### Feature
 
 * **Extensive Collection:** Fetches and displays Pokémon from **ID 1 to 251** (Generation I and II) using the PokeAPI.
 * **Detailed Card View:** Each Pokémon is rendered in a stylish card showing its **ID, Name, Image, and Type(s)**.
