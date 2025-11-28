@@ -84,7 +84,7 @@ const renderPokemon = (pokemonArray) => {
 
 //Start first view
 const initApp = async () => {
-    await getPokemons(1, 251)//Introduce the start pokemon  and the finale
+    await getPokemons(1, 150)//Introduce the start pokemon  and the finale
     renderPokemon(packPokemon)
 }
 
